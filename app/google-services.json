@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "545619774788",
+    "project_id": "intagram-clone-dfb45",
+    "storage_bucket": "intagram-clone-dfb45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545619774788:android:1950c0404c8167987f1b11",
+        "android_client_info": {
+          "package_name": "com.example.intagramclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY5gge4qBFSQslCz5gYvAFnm0ZEdnBxVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
