@@ -13,10 +13,18 @@
         android:theme="@style/Theme.IntagramClone"
         tools:targetApi="31">
         <activity
-            android:name="com.example.HomeScreenActivity"
+            android:name=".edt_ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".util.HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name="com.example.HomeScreenActivity"
             android:exported="false" />
         <activity
             android:name=".LogInActivity"

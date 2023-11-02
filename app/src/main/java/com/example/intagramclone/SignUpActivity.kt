@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.HomeScreenActivity
 import com.example.intagramclone.databinding.ActivitySignUpBinding
 import com.example.intagramclone.models.User
 import com.example.intagramclone.util.USER_NODE
@@ -59,7 +58,7 @@ class SignUpActivity : AppCompatActivity() {
                     Firebase.firestore.collection(USER_NODE)
                         .document(Firebase.auth.currentUser!!.uid).set(user)
                     Toast.makeText(this, "Registartion Sucessfully", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this,HomeScreenActivity::class.java)
+                    val intent = Intent(this,HomeActivity::class.java)
                     startActivity(intent)
                     finish()
                 }.addOnFailureListener {
