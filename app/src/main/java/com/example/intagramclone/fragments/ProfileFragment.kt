@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.intagramclone.R
+import com.example.intagramclone.adapter.ViewPagerAdapter
 import com.example.intagramclone.databinding.FragmentProfileBinding
 import com.example.intagramclone.edt_ProfileActivity
 import com.example.intagramclone.models.User
@@ -19,6 +20,7 @@ import com.squareup.picasso.Picasso
 
 class ProfileFragment : Fragment() {
    private lateinit var binding: FragmentProfileBinding
+   private lateinit var viewPagerAdapter: ViewPagerAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -33,6 +35,11 @@ class ProfileFragment : Fragment() {
             var intent = Intent(view?.context,edt_ProfileActivity::class.java)
             startActivity(intent)
         }
+        viewPagerAdapter=ViewPagerAdapter(requireActivity().supportFragmentManager)
+        viewPagerAdapter.addFragments(MyPostFragment(),"My Post")
+        viewPagerAdapter.addFragments(MyReelsFragment(),"My Reels")
+        binding.viewPager.adapter = viewPagerAdapter
+        binding.tabLayout.setupWithViewPager(binding.viewPager)
         return binding.root
     }
 

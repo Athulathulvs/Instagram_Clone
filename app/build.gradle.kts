@@ -60,4 +60,6 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     // picasso is a powerful image downloading and caching library for Android
     implementation ("com.squareup.picasso:picasso:2.8")
+    // rounded imageview
+    implementation ("com.makeramen:roundedimageview:2.3.0")
 }
