@@ -62,4 +62,6 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.8")
     // rounded imageview
     implementation ("com.makeramen:roundedimageview:2.3.0")
+    // for vedios preview
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 }
