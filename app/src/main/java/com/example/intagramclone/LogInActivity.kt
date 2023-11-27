@@ -1,9 +1,9 @@
 package com.example.intagramclone
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.intagramclone.databinding.ActivityLogInBinding
 import com.example.intagramclone.models.User
 import com.google.firebase.auth.ktx.auth
@@ -35,7 +35,7 @@ class LogInActivity : AppCompatActivity() {
                       startActivity(intent)
                       finish()
                   }.addOnFailureListener {
-                      Toast.makeText(this, ".e", Toast.LENGTH_SHORT).show()
+                      Toast.makeText(this, "enter valid details", Toast.LENGTH_SHORT).show()
                   }
           }
         }

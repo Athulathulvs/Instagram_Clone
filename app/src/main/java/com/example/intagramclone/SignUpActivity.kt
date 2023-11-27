@@ -1,10 +1,10 @@
 package com.example.intagramclone
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.example.intagramclone.databinding.ActivitySignUpBinding
 import com.example.intagramclone.models.User
 import com.example.intagramclone.util.USER_NODE
@@ -39,7 +39,8 @@ class SignUpActivity : AppCompatActivity() {
     private fun setupUI() {
         user = User()
         binding.signUpBtn.setOnClickListener {
-            if (binding.regUsername.editText?.text.toString().isBlank()or
+            if (binding.regFullname.editText?.text.toString().isBlank()or
+                binding.regUsername.editText?.text.toString().isBlank()or
                 binding.regEmail.editText?.text.toString().isBlank()or
                 binding.regPassword.editText?.text.toString().isBlank())
             {
@@ -50,7 +51,8 @@ class SignUpActivity : AppCompatActivity() {
                     binding.regEmail.editText?.text.toString(),
                     binding.regPassword.editText?.text.toString()
                 ).addOnSuccessListener {
-                    user.name = binding.regUsername.editText?.text.toString()
+                    user.name = binding.regFullname.editText?.text.toString()
+                    user.username =binding.regUsername.editText?.text.toString()
                     user.email = binding.regEmail.editText?.text.toString()
                     user.password = binding.regPassword.editText?.text.toString()
                     Firebase.firestore.collection(USER_NODE)
@@ -60,7 +62,7 @@ class SignUpActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }.addOnFailureListener {
-                        Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Failed$it", Toast.LENGTH_SHORT).show()
                     }
 
             }

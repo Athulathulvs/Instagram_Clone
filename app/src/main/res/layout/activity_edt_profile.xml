@@ -21,18 +21,21 @@
         android:textColor="@color/darkgray"
         android:layout_marginTop="50dp"/>
     <EditText
+        android:id="@+id/full_Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Athul vs"
         android:textColor="@color/black"
         />
     <TextView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Username"
         android:textColor="@color/darkgray"
         android:layout_marginTop="10dp"/>
     <EditText
+        android:id="@+id/user_Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -45,6 +48,7 @@
         android:textColor="@color/darkgray"
         android:layout_marginTop="10dp"/>
     <EditText
+        android:id="@+id/bio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
@@ -57,10 +61,23 @@
         android:textColor="@color/darkgray"
         android:layout_marginTop="10dp"/>
     <EditText
+        android:id="@+id/gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
         android:textColor="@color/black"
+        />
+    <Button
+        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/save_acc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Save"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/blue"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:strokeColor="@color/blue"
         />
 
 
